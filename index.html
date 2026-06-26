@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nvoleonpizzeria</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <title>Pizzería Auténtica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap&v=3.0" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?v=3.0">
 
     <style>
         :root {
-            /* Colores adaptados a Pizzería */
-            --primary: #E53935;       
-            --secondary: #1A1A1A;     
-            --accent: #FFB300;        
+            /* Colores por defecto cambiados a tonos de Pizzería (Rojo y Oscuro) */
+            --primary: #D32F2F;       
+            --secondary: #111111;     
+            --accent: #FFC107;        
             --bg-light: #F9FAFB;      
             --text-dark: #1F2937;     
             --text-muted: #6B7280;    
@@ -20,7 +24,7 @@
             --success: #25D366;       
             --shadow: 0 4px 20px rgba(0,0,0,0.08);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --logo-size: 55px;
+            --logo-size: 65px;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
@@ -47,11 +51,11 @@
         .logo-box img:active { transform: scale(0.95); }
         .branch-selector { background: var(--bg-light); border: 1px solid #E5E7EB; padding: 6px 12px; border-radius: 8px; font-size: 13px; font-weight: 600; color: var(--text-dark); cursor: pointer; outline: none; }
         .cart-icon-btn { position: relative; background: var(--primary); color: var(--white); border: none; padding: 10px 18px; border-radius: 50px; cursor: pointer; font-weight: 700; display: flex; align-items: center; gap: 8px; transition: var(--transition); }
-        .cart-icon-btn:hover { transform: scale(1.03); box-shadow: 0 4px 15px rgba(229, 57, 53, 0.4); }
-        .cart-count { background: var(--secondary); color: var(--white); font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 50%; }
+        .cart-icon-btn:hover { transform: scale(1.03); box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4); }
+        .cart-count { background: var(--accent); color: var(--secondary); font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 50%; }
 
         /* --- HERO SECTION --- */
-        .hero { background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.9)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2000&auto=format&fit=crop') no-repeat center center/cover; color: var(--white); padding: 90px 20px; text-align: center; }
+        .hero { background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.9)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2000&auto=format&fit=crop') no-repeat center center/cover; color: var(--white); padding: 90px 20px; text-align: center; }
         .hero h1 { font-size: 42px; margin-bottom: 12px; letter-spacing: -1px; text-transform: uppercase; color: var(--accent); }
         .hero p { font-size: 16px; max-width: 650px; margin: 0 auto 25px auto; opacity: 0.9; line-height: 1.6; }
         .branch-indicators { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
@@ -65,7 +69,7 @@
         .promo-tag { color: var(--primary); font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
         .promo-title { font-size: 28px; color: var(--secondary); margin-bottom: 10px; }
         .promo-price { font-size: 34px; color: var(--primary); font-weight: 800; margin-bottom: 10px; }
-        .promo-img { background: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=800&auto=format&fit=crop') no-repeat center center/cover; min-height: 200px; }
+        .promo-img { background: url('https://images.unsplash.com/photo-1604382355076-af4b0eb60143?q=80&w=800&auto=format&fit=crop') no-repeat center center/cover; min-height: 200px; }
 
         /* --- SLIDER Y MENÚ --- */
         .slider-section, .menu-section, .location-map-section, .flyer-showcase, .digital-menu-promo { max-width: 1200px; margin: 0 auto 50px auto; padding: 0 20px; position: relative; }
@@ -89,7 +93,7 @@
         .tabs-container { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 12px; margin-bottom: 35px; scrollbar-width: none; }
         .tabs-container::-webkit-scrollbar { display: none; }
         .tab-btn { background: var(--white); color: var(--text-dark); border: 1px solid #E5E7EB; padding: 10px 22px; border-radius: 50px; cursor: pointer; font-weight: 600; font-size: 14px; white-space: nowrap; transition: var(--transition); }
-        .tab-btn.active, .tab-btn:hover { background: var(--secondary); color: var(--accent); border-color: var(--secondary); }
+        .tab-btn.active, .tab-btn:hover { background: var(--secondary); color: var(--white); border-color: var(--secondary); }
 
         .menu-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
         @media(min-width: 640px) { .menu-grid { grid-template-columns: 1fr 1fr; } }
@@ -113,7 +117,7 @@
         .map-frame-box { width: 100%; overflow: hidden; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid #E5E7EB; height: 320px; }
 
         /* Promo Digital Menu */
-        .digital-menu-promo { background: linear-gradient(135deg, var(--secondary) 0%, #1A1A1A 100%); border-radius: 24px; color: var(--white); padding: 50px 20px; text-align: center; border: 1px solid rgba(255,255,255,0.05); }
+        .digital-menu-promo { background: linear-gradient(135deg, var(--secondary) 0%, #0A0A0A 100%); border-radius: 24px; color: var(--white); padding: 50px 20px; text-align: center; border: 1px solid rgba(255,255,255,0.05); }
         .promo-badge-top { display: inline-block; background: var(--accent); color: var(--secondary); font-weight: 800; font-size: 11px; padding: 5px 16px; border-radius: 50px; text-transform: uppercase; margin-bottom: 15px; }
         .digital-menu-promo h2 { font-size: 34px; color: var(--primary); margin-bottom: 6px; text-transform: uppercase; }
         .promo-subtitle-top { color: #D1D5DB; font-weight: 500; font-size: 15px; margin-bottom: 45px; }
@@ -121,13 +125,13 @@
         @media(min-width: 768px) { .digital-cta-bar { flex-direction: row; justify-content: center; text-align: center; } }
         .cta-left { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: center; color: var(--white); }
         .cta-left span { font-weight: 800; font-size: 19px; text-transform: uppercase; }
-        .cta-phone { background: var(--secondary); color: var(--accent); padding: 10px 24px; border-radius: 50px; font-weight: 800; font-size: 20px; text-decoration: none; display: flex; align-items: center; gap: 10px; transition: var(--transition); }
+        .cta-phone { background: var(--secondary); color: var(--white); padding: 10px 24px; border-radius: 50px; font-weight: 800; font-size: 20px; text-decoration: none; display: flex; align-items: center; gap: 10px; transition: var(--transition); }
 
         /* Footer */
         footer { background-color: var(--secondary); color: var(--white); padding: 60px 20px 25px 20px; }
         .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 40px; border-bottom: 1px solid #374151; padding-bottom: 40px; }
         @media(min-width: 768px) { .footer-container { grid-template-columns: 1fr 1fr 1fr; } }
-        .footer-about img { height: 55px; margin-bottom: 15px; border-radius: 6px; }
+        .footer-about img { height: 65px; margin-bottom: 15px; border-radius: 6px; background: white; padding: 5px; }
         .footer-links h4, .footer-contact h4 { font-size: 16px; margin-bottom: 20px; color: var(--accent); text-transform: uppercase; }
         .footer-contact p { font-size: 14px; color: #9CA3AF; margin-bottom: 14px; display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
         .footer-contact i { margin-top: 3px; color: var(--primary); }
@@ -136,8 +140,8 @@
         /* Cart Modal */
         .cart-modal { position: fixed; top: 0; right: -100%; width: 100%; max-width: 420px; height: 100%; background: var(--white); box-shadow: -10px 0 30px rgba(0,0,0,0.15); z-index: 2000; display: flex; flex-direction: column; transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .cart-modal.open { right: 0; }
-        .cart-header { background: var(--secondary); color: var(--accent); padding: 24px 20px; display: flex; justify-content: space-between; align-items: center; }
-        .close-cart { background: none; border: none; color: var(--accent); font-size: 26px; cursor: pointer; }
+        .cart-header { background: var(--secondary); color: var(--primary); padding: 24px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .close-cart { background: none; border: none; color: var(--primary); font-size: 26px; cursor: pointer; }
         .cart-body { padding: 20px; overflow-y: auto; flex-grow: 1; }
         .cart-empty-msg { text-align: center; color: var(--text-muted); margin-top: 50px; font-size: 14px; }
         .cart-item-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #F3F4F6; }
@@ -151,7 +155,7 @@
         .radio-label { font-size: 13px; font-weight: 500; display: flex; align-items: center; gap: 5px; cursor: pointer; }
         .form-input { width: 100%; padding: 10px; border: 1px solid #D1D5DB; border-radius: 8px; font-size: 13px; outline: none; transition: var(--transition); }
         textarea.form-input { resize: vertical; min-height: 60px; }
-        .form-input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.1); }
+        .form-input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1); }
         .qr-cart-container { text-align: center; margin-top: 15px; padding: 12px; background: var(--white); border-radius: 12px; border: 1px solid #E5E7EB; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); }
         .qr-cart-container p { font-size: 11px; font-weight: 700; color: var(--text-muted); margin-bottom: 6px; }
         .qr-cart-container img { width: 110px; height: 110px; border: 3px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.08); border-radius: 4px; cursor: pointer; }
@@ -165,43 +169,36 @@
         .admin-panel-modal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.9); width: 95%; max-width: 700px; max-height: 90vh; background: #ffffff; border-radius: 18px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); z-index: 3000; display: none; flex-direction: column; overflow: hidden; border: 1px solid #E5E7EB; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         .admin-panel-modal.show { display: flex; transform: translate(-50%, -50%) scale(1); }
         
-        .admin-panel-modal.fullscreen {
-            width: 100vw !important;
-            height: 100vh !important;
-            max-width: 100vw !important;
-            max-height: 100vh !important;
-            border-radius: 0 !important;
-            border: none !important;
-        }
+        .admin-panel-modal.fullscreen { width: 100vw !important; height: 100vh !important; max-width: 100vw !important; max-height: 100vh !important; border-radius: 0 !important; border: none !important; }
 
-        .admin-header { background: var(--secondary); color: var(--white); padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .admin-header { background: var(--secondary); color: var(--primary); padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
         .admin-body { padding: 24px; overflow-y: auto; background: #fdfdfd; flex-grow: 1; outline: none; }
         .admin-tab-section { border-bottom: 2px solid #F3F4F6; margin-bottom: 20px; padding-bottom: 10px; display: flex; gap: 10px; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
         .admin-tab-section::-webkit-scrollbar { display: none; }
         .admin-tab-link { font-size: 13px; font-weight: 700; color: var(--text-muted); cursor: pointer; background: none; border: none; padding: 8px 14px; border-radius: 6px; transition: var(--transition); }
-        .admin-tab-link.active { color: var(--primary); background: rgba(229, 57, 53, 0.1); }
+        .admin-tab-link.active { color: var(--primary); background: rgba(211, 47, 47, 0.1); }
         .admin-form-box h4 { font-size: 16px; color: var(--secondary); margin-bottom: 15px; border-left: 4px solid var(--accent); padding-left: 8px; }
         .admin-list-scroll { max-height: 200px; overflow-y: auto; border: 1px solid #E5E7EB; border-radius: 10px; padding: 10px; background: #fff; margin-top: 15px; }
         .admin-list-item { display: flex; justify-content: space-between; align-items: center; padding: 10px; border-bottom: 1px solid #F3F4F6; font-size: 13.5px; }
         .admin-list-item:last-child { border-bottom: none; }
         .admin-list-actions { display: flex; gap: 8px; }
         .admin-action-btn { background: none; border: none; cursor: pointer; padding: 4px 8px; border-radius: 4px; font-size: 13px; }
-        .admin-btn-save { background: var(--secondary); color: var(--accent); padding: 12px 20px; border-radius: 8px; border: none; font-weight: 700; cursor: pointer; width: 100%; margin-top: 15px; }
+        .admin-btn-save { background: var(--secondary); color: var(--white); padding: 12px 20px; border-radius: 8px; border: none; font-weight: 700; cursor: pointer; width: 100%; margin-top: 15px; }
         .admin-btn-cancel, .admin-btn-delete { background: #EF4444; color: white; padding: 8px 14px; border-radius: 6px; border: none; font-weight: 600; cursor: pointer; font-size: 12px; margin-top: 8px; width: 100%; }
         .color-picker-group { display: flex; align-items: center; justify-content: space-between; padding: 10px; background: var(--bg-light); border-radius: 8px; margin-bottom: 10px; border: 1px solid #E5E7EB;}
         .color-picker-group input[type="color"] { width: 40px; height: 40px; border: none; border-radius: 50%; cursor: pointer; background: none; }
         .file-upload-wrapper { margin-bottom: 15px; }
-        .file-upload-wrapper input[type="text"] { display: block; width: 100%; padding: 10px; font-size: 13px; border: 1px dashed var(--primary); border-radius: 8px; background: rgba(229, 57, 53, 0.05); outline: none; transition: var(--transition); color: var(--text-dark); }
-        .file-upload-wrapper input[type="text"]:focus { border-style: solid; box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.1); }
+        .file-upload-wrapper input[type="text"] { display: block; width: 100%; padding: 10px; font-size: 13px; border: 1px dashed var(--primary); border-radius: 8px; background: rgba(211, 47, 47, 0.05); outline: none; transition: var(--transition); color: var(--text-dark); }
+        .file-upload-wrapper input[type="text"]:focus { border-style: solid; box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1); }
 
         /* --- CHATBOT WIDGET CSS --- */
         .chat-widget { position: fixed; bottom: 25px; right: 25px; z-index: 9999; }
         .chat-btn { background: var(--primary); color: var(--white); width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; cursor: pointer; box-shadow: 0 8px 20px rgba(0,0,0,0.2); border: none; transition: var(--transition); }
-        .chat-btn:hover { transform: scale(1.08); background: var(--secondary); color: var(--accent); }
+        .chat-btn:hover { transform: scale(1.08); background: var(--secondary); color: var(--primary); }
         .chat-window { position: absolute; bottom: 80px; right: 0; width: 340px; height: 480px; background: var(--white); border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.25); display: none; flex-direction: column; overflow: hidden; border: 1px solid #E5E7EB; transition: var(--transition); }
         .chat-window.open { display: flex; animation: slideUp 0.3s ease; }
-        .chat-header { background: var(--secondary); color: var(--accent); padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 15px; }
-        .chat-close { background: none; border: none; color: var(--accent); font-size: 24px; cursor: pointer; }
+        .chat-header { background: var(--secondary); color: var(--white); padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 15px; }
+        .chat-close { background: none; border: none; color: var(--white); font-size: 24px; cursor: pointer; }
         .chat-messages { flex: 1; padding: 15px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; background: var(--bg-light); font-size: 13.5px; }
         .chat-msg { max-width: 85%; padding: 10px 14px; border-radius: 12px; line-height: 1.4; word-wrap: break-word; }
         .chat-msg.bot { background: var(--white); color: var(--text-dark); align-self: flex-start; border: 1px solid #E5E7EB; border-bottom-left-radius: 2px; }
@@ -220,12 +217,12 @@
     <script>
         (function() {
             try {
-                let cachedConfig = JSON.parse(localStorage.getItem('perfumes_config'));
+                let cachedConfig = JSON.parse(localStorage.getItem('pizzav3_config'));
                 if (cachedConfig && cachedConfig.colors) {
                     document.documentElement.style.setProperty('--primary', cachedConfig.colors.primary);
                     document.documentElement.style.setProperty('--secondary', cachedConfig.colors.secondary);
                     document.documentElement.style.setProperty('--accent', cachedConfig.colors.accent);
-                    document.documentElement.style.setProperty('--logo-size', (cachedConfig.layout?.logoSize || 55) + 'px');
+                    document.documentElement.style.setProperty('--logo-size', (cachedConfig.layout?.logoSize || 65) + 'px');
                 }
             } catch (e) {}
         })();
@@ -236,12 +233,12 @@
     <header>
         <div class="nav-container">
             <div class="logo-box">
-                <img id="mainLogo" src="" alt="pizzería original" onclick="clickLogoCounter()">
+                <img id="mainLogo" src="" alt="pizzería" onclick="clickLogoCounter()">
                 <select class="branch-selector" id="branchSelect" onchange="updateBranchInfo()"></select>
             </div>
             <nav style="width: 100%; max-width: max-content;">
                 <button class="cart-icon-btn" onclick="toggleCart()">
-                    <i class="fa-solid fa-cart-shopping"></i> Pedido
+                    <i class="fa-solid fa-pizza-slice"></i> Carrito
                     <span class="cart-count" id="cartCount">0</span>
                 </button>
             </nav>
@@ -252,15 +249,15 @@
         <h1 id="domHeroTitle">Cargando...</h1>
         <p id="domHeroDesc">Espere un momento por favor.</p>
         <div class="branch-indicators">
-            <span class="badge-info"><i class="fa-solid fa-fire-burner"></i> Horno de Leña</span>
-            <span class="badge-info"><i class="fa-solid fa-pizza-slice"></i> 100% Caseras</span>
+            <span class="badge-info"><i class="fa-solid fa-location-dot"></i> Sucursales Disponibles</span>
+            <span class="badge-info"><i class="fa-solid fa-fire-burner"></i> Recién Horneadas</span>
         </div>
     </section>
 
     <div class="promo-section">
         <div class="promo-container">
             <div class="promo-text">
-                <span class="promo-tag" id="domPromoTag"><i class="fa-solid fa-star"></i> Promo Fin de Semana</span>
+                <span class="promo-tag" id="domPromoTag"><i class="fa-solid fa-star"></i> Promo del Mes</span>
                 <h3 class="promo-title" id="domPromoTitle">...</h3>
                 <div class="promo-price" id="domPromoPrice">...</div>
                 <p style="font-size: 13px; color: var(--text-muted);" id="domPromoDesc">...</p>
@@ -280,7 +277,7 @@
     </section>
 
     <section class="menu-section">
-        <div class="section-title"><h2 id="domMenuTitle">Nuestro Menú</h2></div>
+        <div class="section-title"><h2 id="domMenuTitle">Menú Oficial</h2></div>
         <div class="tabs-container" id="categoryTabsContainer"></div>
         <div class="menu-grid" id="menuGrid"></div>
     </section>
@@ -294,7 +291,7 @@
                 <p id="mapBranchHours"><i class="fa-solid fa-clock"></i> ...</p>
                 <p id="mapBranchPhone"><i class="fa-brands fa-whatsapp"></i> ...</p>
                 <div style="margin-top: 15px;">
-                    <span class="badge-info" style="background: var(--secondary); color: var(--accent); display: inline-flex; gap:8px;"><i class="fa-solid fa-motorcycle" style="color:var(--accent);"></i> ¡Entrega Rápida a Domicilio!</span>
+                    <span class="badge-info" style="background: var(--secondary); color: var(--white); display: inline-flex; gap:8px;"><i class="fa-solid fa-motorcycle" style="color:var(--accent);"></i> ¡Servicio a Domicilio y para Llevar!</span>
                 </div>
             </div>
             <div class="map-frame-box">
@@ -340,14 +337,14 @@
         <button class="chat-btn" onclick="toggleChatWindow()"><i class="fa-solid fa-pizza-slice"></i></button>
         <div class="chat-window" id="chatbotWindow">
             <div class="chat-header">
-                <span><i class="fa-solid fa-robot"></i> Asistente Pizzero</span>
+                <span><i class="fa-solid fa-robot"></i> Asistente de Pizzería</span>
                 <button class="chat-close" onclick="toggleChatWindow()">×</button>
             </div>
             <div class="chat-messages" id="chatMsgBox">
-                <div class="chat-msg bot">¡Hola! Soy la IA de la pizzería. Conozco todo nuestro menú de pizzas, precios y sucursales. ¿Puedo ayudarte a pedir tu pizza ideal o agregar algo a tu orden? 🍕</div>
+                <div class="chat-msg bot">¡Hola! Soy la IA de la pizzería. Conozco todo el menú, promociones y sucursales. ¿Puedo ayudarte a elegir tu pizza favorita o agregar algo a tu orden? 🍕</div>
             </div>
             <div class="chat-input-area">
-                <input type="text" id="chatInputBox" class="chat-input" placeholder="Ej. Quiero pedir una Pepperoni..." onkeypress="handleBotKeyPress(event)">
+                <input type="text" id="chatInputBox" class="chat-input" placeholder="Ej. Quiero pedir una de Pepperoni..." onkeypress="handleBotKeyPress(event)">
                 <button class="chat-send" onclick="sendToBot()"><i class="fa-solid fa-paper-plane"></i></button>
             </div>
         </div>
@@ -356,22 +353,22 @@
     <div class="modal-overlay" id="cartOverlay" onclick="toggleCart()"></div>
     <div class="cart-modal" id="cartModal">
         <div class="cart-header">
-            <h3><i class="fa-solid fa-receipt"></i> Tu Pedido</h3>
+            <h3><i class="fa-solid fa-receipt"></i> Tu Orden</h3>
             <button class="close-cart" onclick="toggleCart()">×</button>
         </div>
-        <div class="cart-body" id="cartBody"><div class="cart-empty-msg">Tu pedido está vacío</div></div>
+        <div class="cart-body" id="cartBody"><div class="cart-empty-msg">Tu carrito está vacío</div></div>
         <div class="cart-checkout-details" id="cartCheckoutDetails" style="display: none;">
             <div class="checkout-form">
                 <h4>Datos de Entrega</h4>
                 <div class="form-group">
                     <div class="radio-tile-group">
                         <label class="radio-label"><input type="radio" name="deliveryMethod" value="domicilio" checked="" onchange="toggleAddressFields(true)"> Envío 🛵</label>
-                        <label class="radio-label"><input type="radio" name="deliveryMethod" value="recojer" onchange="toggleAddressFields(false)"> Para Llevar 🥡</label>
+                        <label class="radio-label"><input type="radio" name="deliveryMethod" value="recojer" onchange="toggleAddressFields(false)"> Recoger 🥡</label>
                     </div>
                 </div>
                 <div class="form-group"><input type="text" id="clientName" class="form-input" placeholder="Nombre completo"></div>
                 <div class="form-group"><input type="tel" id="clientPhone" class="form-input" placeholder="Teléfono"></div>
-                <div id="addressFields"><div class="form-group"><input type="text" id="clientAddress" class="form-input" placeholder="Dirección Completa (Calle, Número, Colonia)"></div></div>
+                <div id="addressFields"><div class="form-group"><input type="text" id="clientAddress" class="form-input" placeholder="Dirección Completa de Envío"></div></div>
             </div>
             <div class="qr-cart-container">
                 <p>ESCANEA O COMPARTE</p>
@@ -401,10 +398,10 @@
     <div class="admin-panel-modal" id="adminPanelModal">
         <div class="admin-header">
             <div style="display: flex; align-items: center; gap: 8px;">
-                <h3 style="margin: 0;"><i class="fa-solid fa-sliders"></i> Panel Administrador Central</h3>
+                <h3 style="margin: 0; color: white;"><i class="fa-solid fa-sliders"></i> Panel Administrador Central</h3>
             </div>
             <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-                <button id="btnGlobalSync" onclick="syncCloudUI()" style="background: var(--secondary); color: var(--accent); border: 2px solid var(--primary); padding: 8px 14px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 13px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);"><i class="fa-solid fa-cloud-arrow-up"></i> Publicar en Vivo</button>
+                <button id="btnGlobalSync" onclick="syncCloudUI()" style="background: var(--accent); color: var(--secondary); border: 2px solid var(--primary); padding: 8px 14px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 13px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);"><i class="fa-solid fa-cloud-arrow-up"></i> Publicar en Vivo</button>
                 
                 <button onclick="toggleAdminFullscreen()" style="background: #3b82f6; color: white; border: none; padding: 8px 14px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 13px;"><i class="fa-solid fa-expand"></i> Expandir</button>
                 <button onclick="recargarYcerrarSesion()" style="background: var(--success); color: white; border: none; padding: 8px 14px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 13px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);"><i class="fa-solid fa-floppy-disk"></i> Recargar Interfaz</button>
@@ -451,8 +448,8 @@
             <div id="adminSectionCategories" style="display: block;">
                 <div class="admin-form-box">
                     <h4>Crear Nueva Categoría</h4>
-                    <div class="form-group"><label style="font-size:11px; font-weight:700;">ID (sin espacios, ej: 'pizzas'):</label><input type="text" id="adminCatId" class="form-input"></div>
-                    <div class="form-group"><label style="font-size:11px; font-weight:700;">Nombre a Mostrar (ej: 'Especialidades'):</label><input type="text" id="adminCatName" class="form-input"></div>
+                    <div class="form-group"><label style="font-size:11px; font-weight:700;">ID (sin espacios, ej: 'clasicas'):</label><input type="text" id="adminCatId" class="form-input"></div>
+                    <div class="form-group"><label style="font-size:11px; font-weight:700;">Nombre a Mostrar (ej: 'Pizzas Clásicas'):</label><input type="text" id="adminCatName" class="form-input"></div>
                     <button class="admin-btn-save" onclick="saveCategoryAdmin()">Agregar Categoría</button>
                 </div>
                 <div style="margin-top:20px;">
@@ -526,7 +523,7 @@
                     <div class="form-group"><label style="font-size:11px; font-weight:700;">Título Principal:</label><input type="text" id="adminHeroTitle" class="form-input"></div>
                     <div class="form-group"><label style="font-size:11px; font-weight:700;">Descripción Principal:</label><textarea id="adminHeroDesc" class="form-input"></textarea></div>
                     <div class="form-group"><label style="font-size:11px; font-weight:700;">Título Slider:</label><input type="text" id="adminSliderTitle" class="form-input"></div>
-                    <div class="form-group"><label style="font-size:11px; font-weight:700;">Título Menú:</label><input type="text" id="adminMenuTitle" class="form-input"></div>
+                    <div class="form-group"><label style="font-size:11px; font-weight:700;">Título Catálogo:</label><input type="text" id="adminMenuTitle" class="form-input"></div>
                     <div class="form-group"><label style="font-size:11px; font-weight:700;">Título Mapa:</label><input type="text" id="adminMapTitle" class="form-input"></div>
                     <div class="form-group"><label style="font-size:11px; font-weight:700;">URL Mapa (Iframe):</label><input type="text" id="adminMapUrl" class="form-input"></div>
                     <div class="form-group"><label style="font-size:11px; font-weight:700;">Badge Digital:</label><input type="text" id="adminPromoDigitalBadge" class="form-input"></div>
@@ -543,8 +540,8 @@
                 <div class="admin-form-box">
                     <h4><i class="fa-solid fa-cloud-arrow-up"></i> Generador de URL para Imágenes</h4>
                     <p style="font-size:12px; color:var(--text-muted); margin-bottom:15px; line-height:1.5;">Sube tu foto y cópiala como URL para usar en el menú o sliders.</p>
-                    <div style="text-align: center; padding: 30px; border: 2px dashed var(--primary); border-radius: 12px; background: rgba(229, 57, 53, 0.05); margin-bottom: 20px;">
-                        <label style="background: var(--secondary); color: var(--accent); padding: 12px 24px; border-radius: 8px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 10px;">
+                    <div style="text-align: center; padding: 30px; border: 2px dashed var(--primary); border-radius: 12px; background: rgba(211, 47, 47, 0.05); margin-bottom: 20px;">
+                        <label style="background: var(--secondary); color: var(--white); padding: 12px 24px; border-radius: 8px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 10px;">
                             <i class="fa-solid fa-file-image"></i> Seleccionar Imagen <input type="file" id="imageUploaderInput" accept="image/*" style="display:none;" onchange="uploadToImgbb(event)">
                         </label>
                         <div id="uploadStatus" style="font-size: 13px; font-weight: 600; margin-top: 15px;">Esperando imagen...</div>
@@ -600,18 +597,16 @@
     <script>
         // =========================================================================
         // 🚀 CONFIGURACIÓN MAESTRA DE LA NUBE (NPOINT) Y CLAVES OFUSCADAS
-        // Para evitar que cualquiera robe los datos leyendo el código fuente,
-        // los invertimos con .split('').reverse().join('')
         // =========================================================================
-        const MASTER_NPOINT_ID = "0310953e2eea19374495".split('').reverse().join(''); 
+        // ID Actualizado según solicitud.
+        const MASTER_NPOINT_ID = "5884b6fff5e24b5c51".split('').reverse().join(''); 
         // =========================================================================
 
-        // Usamos los mismos key de localStorage para mantener la estructura original
-        let sysSettings = JSON.parse(localStorage.getItem('perfumes_sys')) || {
+        let sysSettings = JSON.parse(localStorage.getItem('pizzav3_sys')) || {
             npoint: { id: "" }, 
             security: { 
-                logoPass: "1212".split('').reverse().join(''), // Equivalente seguro a "2121"
-                qrPass: "524232".split('').reverse().join(''), // Equivalente seguro a "232425"
+                logoPass: "1212".split('').reverse().join(''), 
+                qrPass: "524232".split('').reverse().join(''), 
                 expiration: "2026-12-31" 
             }
         };
@@ -619,7 +614,7 @@
         if(sysSettings.firebase) {
             delete sysSettings.firebase;
             if(!sysSettings.npoint) sysSettings.npoint = { id: "" };
-            localStorage.setItem('perfumes_sys', JSON.stringify(sysSettings));
+            localStorage.setItem('pizzav3_sys', JSON.stringify(sysSettings));
         }
 
         function getCloudId() {
@@ -629,26 +624,29 @@
             return sysSettings.npoint?.id;
         }
 
-        let appConfig = JSON.parse(localStorage.getItem('perfumes_config')) || {
-            "colors": { "primary": "#E53935", "secondary": "#1A1A1A", "accent": "#FFB300" },
-            "layout": { "heroTextAlign": "center", "logoSize": "100" },
-            "images": { "logo": "https://images.unsplash.com/photo-1613564834361-9436948817d1?q=80&w=200&auto=format&fit=crop", "heroBg": "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2000&auto=format&fit=crop", "promoImg": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=800&auto=format&fit=crop", "qrCode": "https://i.ibb.co/bM6kRzQx/qr-code-2.png" }
+        let appConfig = JSON.parse(localStorage.getItem('pizzav3_config')) || {
+            "colors": { "primary": "#D32F2F", "secondary": "#111111", "accent": "#FFC107" },
+            "layout": { "heroTextAlign": "center", "logoSize": "65" },
+            "images": { 
+                "logo": "https://images.unsplash.com/photo-1590947132387-155cc02f3212?w=150&h=150&fit=crop", 
+                "heroBg": "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2000&auto=format&fit=crop", 
+                "promoImg": "https://images.unsplash.com/photo-1604382355076-af4b0eb60143?q=80&w=800&auto=format&fit=crop", 
+                "qrCode": "https://i.ibb.co/bM6kRzQx/qr-code-2.png" 
+            }
         };
-        let appTexts = JSON.parse(localStorage.getItem('perfumes_texts')) || {
-            "heroTitle": "Pizzería Auténtica", "heroDesc": "La auténtica experiencia de la pizza a la leña. Masa madre, ingredientes frescos y mucho sabor.", "sliderTitle": "Especialidades de la Casa", "menuTitle": "Menú Oficial", "mapTitle": "Nuestra Ubicación", "mapIframeUrl": "", "promoDigitalBadge": "Sabor que enamora", "promoDigitalTitle": "¡Tu Menú Digital!", "promoDigitalSub": "Rápido • Caliente • Delicioso.", "promoDigitalCta": "¡Pide tus pizzas hoy mismo!", "footerAbout": "La mejor pizza al horno en México.", "footerCopy": "© 2026 Pizzería Original."
+        let appTexts = JSON.parse(localStorage.getItem('pizzav3_texts')) || {
+            "heroTitle": "Pizza Artesanal", "heroDesc": "El auténtico sabor a la leña directamente en tu mesa. Descubre nuestras especialidades.", "sliderTitle": "Nuestras Especialidades", "menuTitle": "Menú Oficial", "mapTitle": "Nuestra Ubicación", "mapIframeUrl": "", "promoDigitalBadge": "Servicio Rápido", "promoDigitalTitle": "¡Pide en línea!", "promoDigitalSub": "Caliente • Rápido • Delicioso.", "promoDigitalCta": "¡Ordena tus pizzas hoy mismo!", "footerAbout": "La mejor pizzería artesanal.", "footerCopy": "© 2026 Pizzería Auténtica."
         };
-        let branchesData = JSON.parse(localStorage.getItem('perfumes_branches')) || [
+        let branchesData = JSON.parse(localStorage.getItem('pizzav3_branches')) || [
             { "name": "Sucursal Centro", "address": "Av. Principal 123", "phone": "526692240194", "hours": "Lunes a Domingo 12 PM a 11 PM" }
         ];
-        let categoryMap = JSON.parse(localStorage.getItem('perfumes_categories')) || { "clasicas": "Clásicas", "especialidades": "Especialidades" };
-        let menuData = JSON.parse(localStorage.getItem('perfumes_menuData')) || [
-            { "name": "Pizza Pepperoni Especial", "price": 250, "category": "clasicas", "desc": "Extra queso mozzarella, doble pepperoni crujiente y orégano.", "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=500&auto=format&fit=crop" },
-            { "name": "Pizza Margarita", "price": 210, "category": "clasicas", "desc": "Rodajas de tomate fresco, albahaca y mozzarella.", "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&auto=format&fit=crop" }
+        let categoryMap = JSON.parse(localStorage.getItem('pizzav3_categories')) || { "clasicas": "Clásicas", "especiales": "Especiales" };
+        let menuData = JSON.parse(localStorage.getItem('pizzav3_menuData')) || [
+            { "name": "Pizza Pepperoni", "price": 199, "category": "clasicas", "desc": "Salsa de tomate, queso mozzarella y abundante pepperoni.", "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=500&auto=format&fit=crop" }
         ];
-        let promoData = JSON.parse(localStorage.getItem('perfumes_promoData')) || { "tag": "Para Compartir", "title": "Combo Familiar", "price": "$380 Mxn", "desc": "1 Pizza Grande + Alitas + Refresco 2L." };
-        let sliderData = JSON.parse(localStorage.getItem('perfumes_slider')) || [
-            { "url": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=800&auto=format&fit=crop", "desc": "Recién Salida del Horno" },
-            { "url": "https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=800&auto=format&fit=crop", "desc": "Masa Madre Tradicional" }
+        let promoData = JSON.parse(localStorage.getItem('pizzav3_promoData')) || { "tag": "Promo Familiar", "title": "Combo 2x1 en Grandes", "price": "$299 Mxn", "desc": "Lleva dos pizzas grandes clásicas al precio de una." };
+        let sliderData = JSON.parse(localStorage.getItem('pizzav3_slider')) || [
+            { "url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&auto=format&fit=crop", "desc": "Sabor Irresistible" }
         ];
 
         let cart = [];
@@ -695,10 +693,10 @@
             let isExpired = sysSettings.security.expiration && (today > sysSettings.security.expiration);
             
             let msg = isExpired ? "¡SISTEMA CADUCADO!\nIngrese Clave Maestra:" : "Contraseña de acceso:";
-            const superMaster = "6202retsam".split('').reverse().join(''); // Equivale a "master2026"
+            const superMaster = "6202retsam".split('').reverse().join(''); 
             
             showCustomPrompt(msg, function(entered) {
-                if (entered === null) return; // Canceló el prompt
+                if (entered === null) return; 
                 
                 if (isExpired) {
                     if (entered === superMaster) {
@@ -762,14 +760,14 @@
             const dataScript = document.createElement('script');
             dataScript.textContent = `
                 // --- DATOS EXPORTADOS DESDE LA NUBE / PANEL DE CONTROL ---
-                localStorage.setItem('perfumes_sys', JSON.stringify(${JSON.stringify(sysSettings)}));
-                localStorage.setItem('perfumes_config', JSON.stringify(${JSON.stringify(appConfig)}));
-                localStorage.setItem('perfumes_texts', JSON.stringify(${JSON.stringify(appTexts)}));
-                localStorage.setItem('perfumes_branches', JSON.stringify(${JSON.stringify(branchesData)}));
-                localStorage.setItem('perfumes_categories', JSON.stringify(${JSON.stringify(categoryMap)}));
-                localStorage.setItem('perfumes_menuData', JSON.stringify(${JSON.stringify(menuData)}));
-                localStorage.setItem('perfumes_promoData', JSON.stringify(${JSON.stringify(promoData)}));
-                localStorage.setItem('perfumes_slider', JSON.stringify(${JSON.stringify(sliderData)}));
+                localStorage.setItem('pizzav3_sys', JSON.stringify(${JSON.stringify(sysSettings)}));
+                localStorage.setItem('pizzav3_config', JSON.stringify(${JSON.stringify(appConfig)}));
+                localStorage.setItem('pizzav3_texts', JSON.stringify(${JSON.stringify(appTexts)}));
+                localStorage.setItem('pizzav3_branches', JSON.stringify(${JSON.stringify(branchesData)}));
+                localStorage.setItem('pizzav3_categories', JSON.stringify(${JSON.stringify(categoryMap)}));
+                localStorage.setItem('pizzav3_menuData', JSON.stringify(${JSON.stringify(menuData)}));
+                localStorage.setItem('pizzav3_promoData', JSON.stringify(${JSON.stringify(promoData)}));
+                localStorage.setItem('pizzav3_slider', JSON.stringify(${JSON.stringify(sliderData)}));
             `;
             clone.querySelector('head').insertBefore(dataScript, clone.querySelector('head').firstChild);
             return "<!DOCTYPE html>\n" + clone.outerHTML;
@@ -790,7 +788,7 @@
             const originalText = btn.innerHTML;
             btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Subiendo...';
             
-            fetch(`https://api.npoint.io/${npId}`, {
+            fetch(`https://api.npoint.io/${npId}?v=3.0`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(dataToSave)
@@ -813,8 +811,7 @@
             const npId = getCloudId();
             
             if (npId && npId !== '' && npId !== 'INGRESA_TU_ID_AQUI') {
-                // AQUÍ APLICAMOS EL DESTRUCTOR DE CACHÉ PARA OBLIGAR LA LECTURA NUEVA
-                const cacheBusterUrl = `https://api.npoint.io/${npId}?nocache=${new Date().getTime()}`;
+                const cacheBusterUrl = `https://api.npoint.io/${npId}?nocache=${new Date().getTime()}&v=3.0`;
                 
                 fetch(cacheBusterUrl, {
                     method: 'GET',
@@ -836,15 +833,14 @@
                             if(data.sliderData) sliderData = data.sliderData;
                             if(data.sysSettings) sysSettings = data.sysSettings;
 
-                            // SOBREESCRIBE EL LOCALSTORAGE AL INSTANTE CON LA VERSIÓN DE LA NUBE
-                            localStorage.setItem('perfumes_sys', JSON.stringify(sysSettings));
-                            localStorage.setItem('perfumes_config', JSON.stringify(appConfig));
-                            localStorage.setItem('perfumes_texts', JSON.stringify(appTexts));
-                            localStorage.setItem('perfumes_branches', JSON.stringify(branchesData));
-                            localStorage.setItem('perfumes_categories', JSON.stringify(categoryMap));
-                            localStorage.setItem('perfumes_menuData', JSON.stringify(menuData));
-                            localStorage.setItem('perfumes_promoData', JSON.stringify(promoData));
-                            localStorage.setItem('perfumes_slider', JSON.stringify(sliderData));
+                            localStorage.setItem('pizzav3_sys', JSON.stringify(sysSettings));
+                            localStorage.setItem('pizzav3_config', JSON.stringify(appConfig));
+                            localStorage.setItem('pizzav3_texts', JSON.stringify(appTexts));
+                            localStorage.setItem('pizzav3_branches', JSON.stringify(branchesData));
+                            localStorage.setItem('pizzav3_categories', JSON.stringify(categoryMap));
+                            localStorage.setItem('pizzav3_menuData', JSON.stringify(menuData));
+                            localStorage.setItem('pizzav3_promoData', JSON.stringify(promoData));
+                            localStorage.setItem('pizzav3_slider', JSON.stringify(sliderData));
                         }
                         startRender();
                     })
@@ -861,7 +857,7 @@
             const npId = getCloudId();
             if(npId && npId !== '' && npId !== 'INGRESA_TU_ID_AQUI') {
                 const dataToSave = { appConfig, appTexts, branchesData, categoryMap, menuData, promoData, sliderData, sysSettings };
-                fetch(`https://api.npoint.io/${npId}`, {
+                fetch(`https://api.npoint.io/${npId}?v=3.0`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(dataToSave)
@@ -885,11 +881,11 @@
             document.documentElement.style.setProperty('--primary', appConfig.colors.primary);
             document.documentElement.style.setProperty('--secondary', appConfig.colors.secondary);
             document.documentElement.style.setProperty('--accent', appConfig.colors.accent);
-            document.documentElement.style.setProperty('--logo-size', (appConfig.layout.logoSize || 55) + 'px');
+            document.documentElement.style.setProperty('--logo-size', (appConfig.layout.logoSize || 65) + 'px');
             document.getElementById('heroSection').style.textAlign = appConfig.layout.heroTextAlign;
             document.getElementById('mainLogo').src = appConfig.images.logo;
             document.getElementById('footerLogo').src = appConfig.images.logo;
-            document.getElementById('heroSection').style.backgroundImage = `linear-gradient(rgba(26,26,26,0.7), rgba(26,26,26,0.9)), url('${appConfig.images.heroBg}')`;
+            document.getElementById('heroSection').style.backgroundImage = `linear-gradient(rgba(17,17,17,0.7), rgba(17,17,17,0.9)), url('${appConfig.images.heroBg}')`;
             document.getElementById('domPromoImg').style.backgroundImage = `url('${appConfig.images.promoImg}')`;
             document.getElementById('topQrCode').src = appConfig.images.qrCode;
             document.getElementById('cartQrCode').src = appConfig.images.qrCode;
@@ -918,8 +914,8 @@
             appConfig.colors.secondary = document.getElementById('colorSecondary').value;
             appConfig.colors.accent = document.getElementById('colorAccent').value;
             appConfig.layout.heroTextAlign = document.getElementById('heroTextAlign').value;
-            appConfig.layout.logoSize = document.getElementById('adminLogoSize').value || 55;
-            localStorage.setItem('perfumes_config', JSON.stringify(appConfig)); syncCloud();
+            appConfig.layout.logoSize = document.getElementById('adminLogoSize').value || 65;
+            localStorage.setItem('pizzav3_config', JSON.stringify(appConfig)); syncCloud();
             applyGlobalConfig();
         }
 
@@ -927,7 +923,7 @@
             const url = event.target.value.trim();
             if (url) {
                 appConfig.images[imageKey] = url;
-                localStorage.setItem('perfumes_config', JSON.stringify(appConfig)); syncCloud();
+                localStorage.setItem('pizzav3_config', JSON.stringify(appConfig)); syncCloud();
                 applyGlobalConfig();
             }
         }
@@ -961,7 +957,7 @@
         function logoutAdmin() {
             localStorage.removeItem('oud_admin_logged_logo');
             localStorage.removeItem('oud_admin_logged_qr');
-            localStorage.removeItem('oud_admin_logged'); // Limpieza del código anterior
+            localStorage.removeItem('oud_admin_logged');
             closeAdminPanel(); alert("Sesiones cerradas correctamente.");
         }
 
@@ -1009,7 +1005,7 @@
             document.getElementById('adminPromoPrice').value = promoData.price; document.getElementById('adminPromoDesc').value = promoData.desc;
             document.getElementById('inputAdminPromoImg').value = appConfig.images.promoImg || '';
             document.getElementById('inputAdminLogo').value = appConfig.images.logo || ''; document.getElementById('inputAdminHeroBg').value = appConfig.images.heroBg || '';
-            document.getElementById('inputAdminQrCode').value = appConfig.images.qrCode || ''; document.getElementById('adminLogoSize').value = appConfig.layout.logoSize || 55;
+            document.getElementById('inputAdminQrCode').value = appConfig.images.qrCode || ''; document.getElementById('adminLogoSize').value = appConfig.layout.logoSize || 65;
             
             for(let i=0; i<5; i++) {
                 if(document.getElementById(`adminSlider${i+1}`)) {
@@ -1038,7 +1034,7 @@
             sysSettings.security.logoPass = newLogoPass;
             sysSettings.security.expiration = newExpiration;
             
-            localStorage.setItem('perfumes_sys', JSON.stringify(sysSettings));
+            localStorage.setItem('pizzav3_sys', JSON.stringify(sysSettings));
             syncCloud();
             
             alert("¡Seguridad actualizada correctamente! La sesión se cerrará para aplicar los cambios.");
@@ -1050,12 +1046,12 @@
             const phone = document.getElementById('adminBranchPhone').value.trim(); const hours = document.getElementById('adminBranchHours').value.trim();
             if (!name || !address || !phone) return alert("Nombre, dirección y teléfono son obligatorios.");
             if (editingBranchIndex !== null) branchesData[editingBranchIndex] = { name, address, phone, hours }; else branchesData.push({ name, address, phone, hours });
-            localStorage.setItem('perfumes_branches', JSON.stringify(branchesData)); syncCloud();
+            localStorage.setItem('pizzav3_branches', JSON.stringify(branchesData)); syncCloud();
             renderAdminLists(); cancelEditBranchAdmin(); updateBranchInfo(); renderBranchSelector();
         }
 
         function deleteBranchAdmin(index) {
-            if(confirm("¿Eliminar esta sucursal del sistema?")) { branchesData.splice(index, 1); localStorage.setItem('perfumes_branches', JSON.stringify(branchesData)); syncCloud(); renderAdminLists(); updateBranchInfo(); renderBranchSelector(); }
+            if(confirm("¿Eliminar esta sucursal del sistema?")) { branchesData.splice(index, 1); localStorage.setItem('pizzav3_branches', JSON.stringify(branchesData)); syncCloud(); renderAdminLists(); updateBranchInfo(); renderBranchSelector(); }
         }
 
         function saveItemAdmin() {
@@ -1063,7 +1059,7 @@
             const name = document.getElementById('adminItemName').value.trim(); const desc = document.getElementById('adminItemDesc').value.trim();
             if (!name || isNaN(price) || !desc) return alert("Completa todos los campos obligatorios.");
             if (editingItemIndex !== null) menuData[editingItemIndex] = { name, price, category, desc, image: tempItemImage }; else menuData.push({ name, price, category, desc, image: tempItemImage });
-            localStorage.setItem('perfumes_menuData', JSON.stringify(menuData)); syncCloud();
+            localStorage.setItem('pizzav3_menuData', JSON.stringify(menuData)); syncCloud();
             renderAdminLists(); cancelEditAdmin(); filterCategory(currentActiveCategory);
         }
 
@@ -1073,29 +1069,29 @@
             if (confirm(`¿Eliminar ${checkboxes.length} productos seleccionados?`)) {
                 const indexes = Array.from(checkboxes).map(cb => parseInt(cb.value)).sort((a, b) => b - a);
                 indexes.forEach(index => { menuData.splice(index, 1); });
-                localStorage.setItem('perfumes_menuData', JSON.stringify(menuData)); syncCloud(); renderAdminLists(); filterCategory(currentActiveCategory);
+                localStorage.setItem('pizzav3_menuData', JSON.stringify(menuData)); syncCloud(); renderAdminLists(); filterCategory(currentActiveCategory);
             }
         }
 
         function deleteItemAdmin(index) {
-            if (confirm("¿Eliminar producto?")) { menuData.splice(index, 1); localStorage.setItem('perfumes_menuData', JSON.stringify(menuData)); syncCloud(); renderAdminLists(); filterCategory(currentActiveCategory); }
+            if (confirm("¿Eliminar producto?")) { menuData.splice(index, 1); localStorage.setItem('pizzav3_menuData', JSON.stringify(menuData)); syncCloud(); renderAdminLists(); filterCategory(currentActiveCategory); }
         }
 
         function saveCategoryAdmin() {
             const key = document.getElementById('adminCatId').value.trim().toLowerCase().replace(/\s+/g, ''); const name = document.getElementById('adminCatName').value.trim();
             if(!key || !name) return alert("Completa ID y Nombre");
-            categoryMap[key] = name; localStorage.setItem('perfumes_categories', JSON.stringify(categoryMap)); syncCloud();
+            categoryMap[key] = name; localStorage.setItem('pizzav3_categories', JSON.stringify(categoryMap)); syncCloud();
             renderAdminLists(); renderCategoryTabs(); document.getElementById('adminCatId').value = ''; document.getElementById('adminCatName').value = '';
         }
 
         function deleteCategoryAdmin(key) {
             if(Object.keys(categoryMap).length <= 1) return alert("No puedes borrar la última categoría.");
-            if (confirm("¿Borrar esta categoría?")) { delete categoryMap[key]; localStorage.setItem('perfumes_categories', JSON.stringify(categoryMap)); syncCloud(); renderAdminLists(); renderCategoryTabs(); }
+            if (confirm("¿Borrar esta categoría?")) { delete categoryMap[key]; localStorage.setItem('pizzav3_categories', JSON.stringify(categoryMap)); syncCloud(); renderAdminLists(); renderCategoryTabs(); }
         }
 
         function savePromoAdmin() {
             promoData = { tag: document.getElementById('adminPromoTag').value.trim(), title: document.getElementById('adminPromoTitle').value.trim(), price: document.getElementById('adminPromoPrice').value.trim(), desc: document.getElementById('adminPromoDesc').value.trim() };
-            localStorage.setItem('perfumes_promoData', JSON.stringify(promoData)); syncCloud(); renderPromoUI();
+            localStorage.setItem('pizzav3_promoData', JSON.stringify(promoData)); syncCloud(); renderPromoUI();
         }
 
         function saveImagesAdmin() {
@@ -1105,12 +1101,12 @@
                     sliderData.push({ url: document.getElementById(`adminSlider${i+1}`).value.trim(), desc: document.getElementById(`adminSliderDesc${i+1}`).value.trim() });
                 }
             }
-            localStorage.setItem('perfumes_slider', JSON.stringify(sliderData)); syncCloud(); renderSlider(); setupSliderDots();
+            localStorage.setItem('pizzav3_slider', JSON.stringify(sliderData)); syncCloud(); renderSlider(); setupSliderDots();
         }
 
         function saveTextsAdmin() {
             appTexts = { heroTitle: document.getElementById('adminHeroTitle').value.trim(), heroDesc: document.getElementById('adminHeroDesc').value.trim(), sliderTitle: document.getElementById('adminSliderTitle').value.trim(), menuTitle: document.getElementById('adminMenuTitle').value.trim(), mapTitle: document.getElementById('adminMapTitle').value.trim(), mapIframeUrl: document.getElementById('adminMapUrl').value.trim(), promoDigitalBadge: document.getElementById('adminPromoDigitalBadge').value.trim(), promoDigitalTitle: document.getElementById('adminPromoDigitalTitle').value.trim(), promoDigitalSub: document.getElementById('adminPromoDigitalSub').value.trim(), promoDigitalCta: document.getElementById('adminPromoDigitalCta').value.trim(), footerAbout: document.getElementById('adminFooterAbout').value.trim(), footerCopy: document.getElementById('adminFooterCopy').value.trim() };
-            localStorage.setItem('perfumes_texts', JSON.stringify(appTexts)); syncCloud(); applyGlobalConfig();
+            localStorage.setItem('pizzav3_texts', JSON.stringify(appTexts)); syncCloud(); applyGlobalConfig();
         }
 
         function renderBranchSelector() {
@@ -1172,15 +1168,15 @@
         function toggleAddressFields(isDelivery) { const addressFields = document.getElementById('addressFields'); if (addressFields) { addressFields.style.display = isDelivery ? 'block' : 'none'; } }
         function toggleCart() { document.getElementById('cartModal').classList.toggle('open'); document.getElementById('cartOverlay').classList.toggle('show'); }
         function addToCart(name, price) { const i = cart.find(x => x.name === name); if (i) i.quantity++; else cart.push({ name, price, quantity: 1 }); updateCartUI(); }
-        function updateCartUI() { const body = document.getElementById('cartBody'); body.innerHTML = ''; let total = 0; let qty = 0; if (cart.length === 0) { body.innerHTML = '<div class="cart-empty-msg">Tu pedido está vacío</div>'; document.getElementById('cartCheckoutDetails').style.display = 'none'; } else { cart.forEach(item => { total += item.price * item.quantity; qty += item.quantity; body.innerHTML += `<div class="cart-item-row"><div><h5>${item.name} (x${item.quantity})</h5><span>$${item.price*item.quantity}</span></div></div>`; }); document.getElementById('cartCheckoutDetails').style.display = 'block'; } document.getElementById('cartCount').innerText = qty; document.getElementById('cartTotal').innerText = `$${total}`; }
+        function updateCartUI() { const body = document.getElementById('cartBody'); body.innerHTML = ''; let total = 0; let qty = 0; if (cart.length === 0) { body.innerHTML = '<div class="cart-empty-msg">Tu carrito está vacío</div>'; document.getElementById('cartCheckoutDetails').style.display = 'none'; } else { cart.forEach(item => { total += item.price * item.quantity; qty += item.quantity; body.innerHTML += `<div class="cart-item-row"><div><h5>${item.name} (x${item.quantity})</h5><span>$${item.price*item.quantity}</span></div></div>`; }); document.getElementById('cartCheckoutDetails').style.display = 'block'; } document.getElementById('cartCount').innerText = qty; document.getElementById('cartTotal').innerText = `$${total}`; }
         function sendWhatsAppOrder() {
-            if(cart.length===0) return alert("Agrega productos a tu pedido primero.");
+            if(cart.length===0) return alert("Agrega productos a tu orden primero.");
             const deliveryMethodRadio = document.querySelector('input[name="deliveryMethod"]:checked'); const deliveryMethod = deliveryMethodRadio ? deliveryMethodRadio.value : 'domicilio';
             const clientName = document.getElementById('clientName').value.trim(); const clientPhone = document.getElementById('clientPhone').value.trim(); const clientAddress = document.getElementById('clientAddress') ? document.getElementById('clientAddress').value.trim() : '';
             if(!clientName || !clientPhone) return alert("Por favor, ingresa tu nombre y teléfono.");
             if(deliveryMethod === 'domicilio' && !clientAddress) return alert("Por favor, ingresa tu dirección completa para el envío.");
             let t = `*NUEVO PEDIDO - Pizzería* 🍕\n\n*Datos del Cliente:*\n👤 Nombre: ${clientName}\n📱 Teléfono: ${clientPhone}\n`;
-            if(deliveryMethod === 'domicilio') { t += `🛵 Método: *Envío a Domicilio*\n📍 Dirección: ${clientAddress}\n\n`; } else { t += `🥡 Método: *Para Llevar en Sucursal*\n\n`; }
+            if(deliveryMethod === 'domicilio') { t += `🛵 Método: *Envío a Domicilio*\n📍 Dirección: ${clientAddress}\n\n`; } else { t += `🥡 Método: *Recoger en Sucursal*\n\n`; }
             t += `*Detalle de Compra:*\n`; let total = 0; cart.forEach(i => { t += `▪️ ${i.quantity}x ${i.name} ($${i.price * i.quantity})\n`; total += (i.price * i.quantity); });
             t += `\n*Total a Pagar:* $${total} MXN\n\n¡Quedo a la espera de la confirmación de mi pedido!`;
             let destPhone = "+52811080 9965"; if(branchesData.length > 0) { const select = document.getElementById('branchSelect'); const selectedIndex = select.value || 0; destPhone = branchesData[selectedIndex].phone; }
@@ -1191,19 +1187,19 @@
         function sendToBot() { const input = document.getElementById('chatInputBox'); const msg = input.value.trim(); if(!msg) return; renderChatMsg(msg, 'user'); input.value = ''; setTimeout(() => { processIntelligentResponse(msg); }, 500); }
         function renderChatMsg(text, sender) { const chatBox = document.getElementById('chatMsgBox'); chatBox.innerHTML += `<div class="chat-msg ${sender}">${text}</div>`; chatBox.scrollTop = chatBox.scrollHeight; }
         function processIntelligentResponse(rawMsg) {
-            const msg = rawMsg.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); let response = "Hmm, no estoy completamente seguro. Puedes preguntarme por precios, qué pizzas tenemos, o pedirme directamente que agregue algo al carrito (Ej: 'Agrega Pepperoni').";
+            const msg = rawMsg.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); let response = "Hmm, no estoy completamente seguro. Puedes preguntarme por precios, qué pizzas tenemos, o pedirme directamente que agregue algo al carrito (Ej: 'Agrega una de Pepperoni').";
             let foundProduct = menuData.find(p => { const prodName = p.name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); return msg.includes(prodName) || (prodName.length > 5 && msg.includes(prodName.substring(0, 6))); });
             let isAddIntent = msg.includes('comprar') || msg.includes('agregar') || msg.includes('quiero') || msg.includes('dame') || msg.includes('pedido'); let isPriceIntent = msg.includes('precio') || msg.includes('cuesta') || msg.includes('valor');
             let mainBranchAddr = branchesData.length > 0 ? branchesData[0].address : "Nuestra sucursal"; let mainBranchHours = branchesData.length > 0 ? branchesData[0].hours : "todos los días";
-            if (foundProduct && isAddIntent) { addToCart(foundProduct.name, foundProduct.price); response = `¡Excelente elección! He agregado 1x **${foundProduct.name}** a tu carrito. 🍕 ¿Te ayudo con algo más o prefieres ir a pagar pulsando en tu pedido arriba?`; } 
-            else if (foundProduct && isPriceIntent) { response = `La **${foundProduct.name}** tiene un precio de **$${foundProduct.price} MXN**. ¡Está deliciosa! ¿Deseas que la agregue a tu pedido? (Dime "agregar ${foundProduct.name}")`; }
-            else if (foundProduct) { response = `Esa es una de nuestras favoritas. La **${foundProduct.name}** cuesta $${foundProduct.price}. ${foundProduct.desc}. ¿Quieres agregarla a tu pedido?`; }
-            else if (msg.includes('hola') || msg.includes('buenas') || msg.includes('buenos dias')) { response = "¡Hola! 👋 Bienvenido a la pizzería. Soy tu asistente virtual. ¿Buscas alguna recomendación, ver nuestro menú completo o armar un pedido?"; }
-            else if (msg.includes('menu') || msg.includes('pizzas') || msg.includes('opciones') || msg.includes('tienen')) { let names = menuData.map(p => p.name).join(', '); response = `Contamos con deliciosas opciones como: ${names}. ¿Buscas alguna pizza clásica o especialidad en especial?`; }
-            else if (msg.includes('ubicacion') || msg.includes('donde') || msg.includes('sucursal')) { response = `📍 Nuestra sucursal principal está en: ${mainBranchAddr}. ¡Date una vuelta o te lo enviamos calientito!`; }
+            if (foundProduct && isAddIntent) { addToCart(foundProduct.name, foundProduct.price); response = `¡Excelente elección! He agregado 1x **${foundProduct.name}** a tu orden. 🍕 ¿Te ayudo con algo más o prefieres ir a pagar pulsando en el carrito de compras arriba?`; } 
+            else if (foundProduct && isPriceIntent) { response = `La pizza **${foundProduct.name}** tiene un precio de **$${foundProduct.price} MXN**. ¡Es deliciosa! ¿Deseas que la agregue a tu orden? (Dime "agregar ${foundProduct.name}")`; }
+            else if (foundProduct) { response = `Esa es una gran pizza. **${foundProduct.name}** cuesta $${foundProduct.price}. ${foundProduct.desc}. ¿Quieres agregarla a tu pedido?`; }
+            else if (msg.includes('hola') || msg.includes('buenas') || msg.includes('buenos dias')) { response = "¡Hola! 👋 Bienvenido a nuestra Pizzería. Soy tu asistente virtual. ¿Buscas alguna recomendación, ver nuestro menú o armar un pedido?"; }
+            else if (msg.includes('menu') || msg.includes('pizzas') || msg.includes('opciones') || msg.includes('tienen')) { let names = menuData.map(p => p.name).join(', '); response = `Contamos con especialidades como: ${names}. ¿Buscas alguna de carnes, vegetariana o clásica?`; }
+            else if (msg.includes('ubicacion') || msg.includes('donde') || msg.includes('sucursal')) { response = `📍 Nuestra sucursal principal está en: ${mainBranchAddr}. ¡Date una vuelta o te lo enviamos a casa!`; }
             else if (msg.includes('horario') || msg.includes('abren') || msg.includes('cierran')) { response = `🕒 Nuestros horarios son: ${mainBranchHours}. ¡Te esperamos con gusto!`; }
-            else if (msg.includes('envio') || msg.includes('domicilio')) { response = "🛵 ¡Claro! Hacemos envíos y entrega a domicilio. Puedes seleccionar la opción 'Envío' al confirmar tu pedido en el carrito."; }
-            else if (msg.includes('pagar') || msg.includes('finalizar') || msg.includes('carrito')) { response = "Para finalizar tu pedido, abre tu 'Pedido/Carrito' en la parte superior y llena los datos de entrega. Te abriré tu orden para que lo veas."; setTimeout(() => { toggleCart(); }, 1000); }
+            else if (msg.includes('envio') || msg.includes('domicilio')) { response = "🛵 ¡Claro! Hacemos entrega a domicilio local. Puedes seleccionar la option 'Envío' al confirmar tu carrito."; }
+            else if (msg.includes('pagar') || msg.includes('finalizar') || msg.includes('carrito')) { response = "Para finalizar tu pedido, abre tu 'Carrito' en la parte superior y llena los datos de entrega. Te abriré el carrito para que lo veas."; setTimeout(() => { toggleCart(); }, 1000); }
             renderChatMsg(response, 'bot');
         }
 
